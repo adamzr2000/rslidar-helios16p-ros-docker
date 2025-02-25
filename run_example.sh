@@ -3,7 +3,6 @@ xhost local:root
 XAUTH=/tmp/.docker.xauth
 
 # nvidia-container-runtime
-# nvidia-container-runtime
 export NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES:-all}
 export NVIDIA_DRIVER_CAPABILITIES=${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
 

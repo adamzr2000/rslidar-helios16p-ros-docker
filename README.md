@@ -31,9 +31,9 @@ docker image ls
 ### Docker run example
 In this folder we also provide a docker run example. 
 
-> Note: ensure that the d435i camera is connected via USB to your PC before testing this container.
+> Note: ensure that the 3D LiDAR is connected via Ethernet to your PC before testing this container.
 
-To run the d435i ROS Drivers:
+To run the 3D LiDAR ROS Drivers:
 ```bash
 ./run_example.sh
 ```
@@ -44,5 +44,12 @@ docker ps
 ```
 
 In the output you should be able to see the `3d-lidar` container up and running.
+
+Execute inside the container:
+```bash
+roslaunch rslidar_sdk start.launch
+```
+
+
 
 
