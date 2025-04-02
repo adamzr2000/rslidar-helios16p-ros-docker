@@ -2,6 +2,12 @@ xhost local:root
 
 XAUTH=/tmp/.docker.xauth
 
+# nvidia-container-runtime
+export NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES:-all}
+export NVIDIA_DRIVER_CAPABILITIES=${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
+
+
+
 # Function to validate IP address format
 validate_ip() {
     local ip=$1
@@ -107,6 +113,7 @@ docker run \
         -v ${host_catkin_ws_dir}:/home/3d-lidar/catkin_ws/src \
         --env="XAUTHORITY=$XAUTH" \
         --volume="$XAUTH:$XAUTH" \
+        --runtime=nvidia \
         3d-lidar:latest
 
 echo "Done."

@@ -1,8 +1,5 @@
 # 3D LiDAR ROS Drivers. 
 
-## What is it?
-
-
 ## What does this container do?
 
 This container runs the ROS drivers for the RS-Helios-16P 3D LiDAR - RoboSense.
@@ -12,7 +9,7 @@ This container runs the ROS drivers for the RS-Helios-16P 3D LiDAR - RoboSense.
 ### Dependencies:
 
 The 3D LiDAR ROS Drivers depends on:
-  - ros-master (tutorial [here](../ros-master/))
+  - ros-master (tutorial [here](https://github.com/adamzr2000/unitree-go1-digital-twin/tree/main/digital-twin-service/ros-master))
 
 ### First you will need to build the container. 
 
@@ -47,6 +44,9 @@ In the output you should be able to see the `3d-lidar` container up and running.
 
 Execute inside the container:
 ```bash
+docker exec -it 3d-lidar /bin/bash
+
+# 3d-lidar
 roslaunch rslidar_sdk start.launch
 ```
 

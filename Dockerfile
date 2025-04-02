@@ -4,13 +4,6 @@ ARG ROS_DISTRO=noetic
 # Use an official ROS base image 
 FROM osrf/ros:${ROS_DISTRO}-desktop-full
 
-# nvidia-container-runtime
-# ENV NVIDIA_VISIBLE_DEVICES \
-#     ${NVIDIA_VISIBLE_DEVICES:-all}
-# ENV NVIDIA_DRIVER_CAPABILITIES \
-#     ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
-
-
 # Label to indicate the maintainer of this Dockerfile
 LABEL maintainer="azahir@pa.uc3m.es"
 
