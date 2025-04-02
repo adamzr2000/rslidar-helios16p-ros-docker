@@ -1,8 +1,14 @@
-# 3D LiDAR ROS Drivers. 
+# RS-Helios-16P 3D LiDAR ROS Drivers. 
 
 ## What does this container do?
 
 This container runs the ROS drivers for the RS-Helios-16P 3D LiDAR - RoboSense.
+
+**Author:** Adam Zahir Rodriguez
+
+📘 **Documentation**: Refer to the [RS-Helios-16P User Guide](https://static.generation-robots.com/media/RS-HELIOS-16P_USER_GUIDE_V1.0.1_EN.pdf) for LiDAR setup, specifications, and networking configuration.
+
+---
 
 ## Run it?
 
@@ -49,7 +55,4 @@ docker exec -it 3d-lidar /bin/bash
 # 3d-lidar
 roslaunch rslidar_sdk start.launch
 ```
-
-
-
 
